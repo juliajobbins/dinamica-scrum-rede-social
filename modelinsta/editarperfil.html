@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            margin: 0;
+            padding: 0;
+            color: #f0f0f0;
+        }
+        .header {
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .profile, .edit-profile {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .edit-profile.active, .profile.active {
+            display: flex;
+        }
+        .connect {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .connect button {
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .connect button:hover {
+            background-color: #303f9f;
+        }
+        .edit-profile {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        .edit-profile h3 {
+            color: #3f51b5;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .edit-profile form {
+            display: flex;
+            flex-direction: column;
+        }
+        .edit-profile form label {
+            margin: 10px 0 5px;
+        }
+        .edit-profile form input, .edit-profile form textarea {
+            padding: 10px;
+            border: 1px solid #3f51b5;
+            border-radius: 5px;
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        .edit-profile form button {
+            background-color: #8393ed;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .edit-profile form button profile {
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .edit-profile form button:hover {
+            background-color: #8393ed;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .nav-buttons button {
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .nav-buttons button:hover {
+            background-color: #303f9f;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Modelinsta - Editar Perfil
+    </div>
+    <div class="edit-profile active" id="edit-profile">
+        <h3>Editar Perfil</h3>
+        <form>
+            <label for="profile-pic">Foto de Perfil</label>
+            <input type="file" id="profile-pic" name="profile-pic">
+            
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" value="Nome do Modelo/Estilista">
+            
+            <label for="username">Nome de Usuário</label>
+            <input type="text" id="username" name="username" value="@nomeusuario">
+            
+            <label for="bio">Bio</label>
+            <textarea id="bio" name="bio" rows="4">Uma breve descrição sobre você...</textarea>
+            
+            <button>Salvar Alterações</button>
+
+            <button><a href="exemploperfil.html">Exemplo de perfil</a></button>
+        </form>
+        <div class="nav-buttons">
+            <button><a href="perfil.html"> Cancelar</a></button>
+        </div>
+    </div>
+    </script>
+</body>
+</html>
