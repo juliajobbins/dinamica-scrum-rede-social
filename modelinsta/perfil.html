@@ -1,0 +1,136 @@
++<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Modelinsta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            margin: 0;
+            padding: 0;
+            color: #f0f0f0;
+        }
+        .header {
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 3px solid #3f51b5;
+        }
+        .profile-info {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .profile-info h2 {
+            margin: 10px 0 5px 0;
+            color: #3f51b5;
+        }
+        .profile-info p {
+            margin: 5px 0;
+            color: #7986cb;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+        .stats div {
+            text-align: center;
+            color: #3f51b5;
+        }
+        .stats div span {
+            display: block;
+            font-size: 18px;
+            color: #7986cb;
+        }
+        .bio {
+            text-align: center;
+            margin: 20px 20px;
+            color: #f0f0f0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .gallery button {
+            width: 100px;
+            height: 50px;
+            margin: 5px;
+            object-fit: cover;
+            border: 2px solid #394bb0;
+            border-radius: 5px;
+            background-color: #3f51b5;
+        }
+        .connect {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .connect button {
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .connect button:hover {
+            background-color: #303f9f;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Modelinsta - Perfil Pessoal
+    </div>
+    <div class="profile">
+        <img src="perfilsemfoto.jpg" alt="Foto de Perfil">
+        <div class="profile-info">
+            <h2>Nome do Modelo/Estilista</h2>
+            <p>@nomeusuario</p>
+        </div>
+        <div class="stats">
+            <div>
+                <span>0</span>
+                Publicações
+            </div>
+            <div>
+                <span>0</span>
+                Seguidores
+            </div>
+            <div>
+                <span>0</span>
+                Seguindo
+            </div>
+        </div>
+        <div class="bio">
+            <p>Bio: Uma breve descrição sobre você...</p>
+        </div>
+    </div>
+    <div class="connect">
+        <button><a href="editarperfil.html">Editar perfil</a></button>
+    </div>
+    <div class="gallery">
+       <button>Adicionar fotos</button>
+    </div>
+</body>
+</html>
