@@ -1,0 +1,95 @@
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+header {
+    background-color: #2f4f7f;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav li {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.notifications {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.notification-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.notification {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.notification-content {
+    margin-bottom: 10px;
+}
+
+.notification-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.username {
+    font-weight: bold;
+    color: #2f4f7f;
+}
+
+.post-title {
+    font-style: italic;
+    color: #666;
+}
+
+.view-btn {
+    background-color: #2f4f7f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background-color: #1a3d6f;
+}
+
+.view-more {
+    background-color: #2f4f7f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.view-more:hover {
+    background-color: #1a3d6f;
+}
