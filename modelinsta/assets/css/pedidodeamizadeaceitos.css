@@ -1,0 +1,78 @@
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    color: #2f4f7f;
+}
+
+header {
+    background-color: #2f4f7f;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav li {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.accepted-friends {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#accepted-friends-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#accepted-friends-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#accepted-friends-list li:last-child {
+    border-bottom: none;
+}
+
+#accepted-friends-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.load-more {
+    background-color: #2f4f7f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.load-more:hover {
+    background-color: #1a1d23;
+}
