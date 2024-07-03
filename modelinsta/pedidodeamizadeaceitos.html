@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos de Amizade Aceitos</title>
+    <link rel="stylesheet" href="assets/css/pedidodeamizadeaceitos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="feednoticias.html">Início</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="listadeamigos.html">Amigos</a></li>
+                <li><a href="inicial.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="accepted-friends">
+            <h1>Pedidos de Amizade Aceitos</h1>
+            <ul id="accepted-friends-list">
+               <script>
+                const acceptedFriendsList = document.getElementById('accepted-friends-list');
+
+const acceptedFriends = [
+    { id: 1, name: 'Emma', username: 'emmaahdsu' },
+    { id: 2, name: 'Charlotte', username: 'lottieysl.q' },
+    { id: 3, name: 'Lukas', username: 'lukinhascamarada12pjn' },
+    { id: 4, name: 'Oliver', username: 'ooliverne'},
+    { id: 5, name: 'Agatha', username: "byyagatha"},
+    { id: 6, name: 'Gustavo', username: "gustavonamodolukinhas"},
+    { id: 7, name: 'Isabel', username: "isinhaamakny"},
+];
+
+acceptedFriends.forEach((friend) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${friend.name} (@${friend.username})`;
+    acceptedFriendsList.appendChild(listItem);
+});
+
+document.querySelector('.load-more').addEventListener('click', () => {
+    console.log('Carregando mais amigos aceitos...');
+});
+               </script>
+            </ul>
+            <button class="load-more">Carregar mais</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Modelinsta.</p>
+    </footer>
+</body>
+</html>
