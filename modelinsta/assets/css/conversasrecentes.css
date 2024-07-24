@@ -1,0 +1,101 @@
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+header {
+    background-color: #2f4f7f;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav li {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.chat {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.conversations-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.conversation {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.conversation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conversation-header h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.conversation-header span {
+    font-size: 14px;
+    color: #666;
+}
+
+.conversation-messages {
+    padding: 10px;
+}
+
+.conversation-messages p {
+    margin: 10px 0;
+}
+
+form input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #2f4f7f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form input button:hover {
+    background-color: #1a3d6f;
+}
