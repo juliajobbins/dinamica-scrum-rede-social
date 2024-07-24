@@ -64,7 +64,7 @@ main {
     background-color: #f0f0f0;
 }
 
-.load-more {
+button {
     background-color: #2f4f7f;
     color: #fff;
     border: none;
@@ -73,6 +73,11 @@ main {
     cursor: pointer;
 }
 
-.load-more:hover {
+button:hover {
     background-color: #1a1d23;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
 }
