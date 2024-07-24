@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Mensagens</title>
+    <link rel="stylesheet" href="assets/css/enviarmens.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="feednoticias.html">Início</a></li>
+                <li><a href="conversasrecentes.html">Conversas recentes</a></li>
+                <li><a href="inicial.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <form id="form-mensagem">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            <label for="destinatario">Destinatário:</label>
+            <input type="text" id="destinatario" name="destinatario" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
