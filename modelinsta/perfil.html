@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
             padding: 0;
             color: #f0f0f0;
         }
+
         .header {
             background-color: #1e1e1e;
             color: #f0f0f0;
@@ -19,30 +21,36 @@
             text-align: center;
             font-size: 24px;
         }
+
         .profile {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 20px;
         }
+
         .profile img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             border: 3px solid #3f51b5;
         }
+
         .profile-info {
             text-align: center;
             margin-top: 10px;
         }
+
         .profile-info h2 {
             margin: 10px 0 5px 0;
             color: #3f51b5;
         }
+
         .profile-info p {
             margin: 5px 0;
             color: #7986cb;
         }
+
         .stats {
             display: flex;
             justify-content: space-around;
@@ -50,26 +58,31 @@
             max-width: 400px;
             margin-top: 20px;
         }
+
         .stats div {
             text-align: center;
             color: #3f51b5;
         }
+
         .stats div span {
             display: block;
             font-size: 18px;
             color: #7986cb;
         }
+
         .bio {
             text-align: center;
             margin: 20px 20px;
             color: #f0f0f0;
         }
+
         .gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 20px;
         }
+
         .gallery button {
             width: 100px;
             height: 50px;
@@ -79,12 +92,14 @@
             border-radius: 5px;
             background-color: #3f51b5;
         }
+
         .connect {
             display: flex;
             justify-content: center;
             margin: 20px 0;
         }
-        .connect button {
+
+        button {
             background-color: #3f51b5;
             color: white;
             padding: 10px 20px;
@@ -93,20 +108,28 @@
             cursor: pointer;
             margin: 0 10px;
         }
-        .connect button:hover {
+
+        button:hover {
             background-color: #303f9f;
+        }
+
+        a {
+            color: #f0f0f0;
+            text-decoration: none;
         }
     </style>
 </head>
+
+
 <body>
     <div class="header">
-        Modelinsta - Perfil Pessoal
+        Modelinsta
     </div>
     <div class="profile">
-        <img src="perfilsemfoto.jpg" alt="Foto de Perfil">
+        <img id="profilePic" src="perfilsemfoto.jpg" alt="Foto de Perfil">
         <div class="profile-info">
-            <h2>Nome do Modelo/Estilista</h2>
-            <p>@nomeusuario</p>
+            <h2 id="profileName">Nome do Modelo/Estilista</h2>
+            <p id="profileUsername">@nomeusuario</p>
         </div>
         <div class="stats">
             <div>
@@ -123,16 +146,41 @@
             </div>
         </div>
         <div class="bio">
-            <p>Bio: Uma breve descrição sobre você...</p>
+            <p id="profileBio">Uma breve descrição sobre você...</p>
         </div>
     </div>
     <div class="connect">
         <button><a href="editarperfil.html">Editar perfil</a></button>
     </div>
     <div class="gallery">
-       <button>Adicionar fotos</button>
-       <button><a href="feednoticias.html">Feed</a></button>
-       <button><a href="listadeamigos.html">Amigos</a></button>
+        <button><a href="adicionarpostagem.html">Adicionar postagem</a></button>
+        <button><a href="feednoticias.html">Feed</a></button>
+        <button><a href="listadeamigos.html">Amigos</a></button>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const name = localStorage.getItem('profileName');
+            const username = localStorage.getItem('profileUsername');
+            const bio = localStorage.getItem('profileBio');
+            const profilePic = localStorage.getItem('profilePic');
+
+            if (name) {
+                document.getElementById('profileName').textContent = name;
+            }
+
+            if (username) {
+                document.getElementById('profileUsername').textContent = username;
+            }
+
+            if (bio) {
+                document.getElementById('profileBio').textContent = 'Bio: ' + bio;
+            }
+
+            if (profilePic) {
+                document.getElementById('profilePic').src = profilePic;
+            }
+        });
+    </script>
 </body>
+
 </html>
