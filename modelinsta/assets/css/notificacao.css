@@ -1,5 +1,5 @@
 body {
-    background-color: #000;
+    background-color: #131111;
     font-family: Arial, sans-serif;
     color: #fff;
 }
@@ -27,11 +27,15 @@ header nav a {
     text-decoration: none;
 }
 
+header nav a:hover {
+    color: #ccc;
+}
+
 .notifications {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #333;
+    background-color: #302f35;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -45,7 +49,7 @@ header nav a {
 .notification {
     margin-bottom: 20px;
     padding: 20px;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #ddd;
 }
 
 .notification-content {
@@ -60,7 +64,7 @@ header nav a {
 
 .username {
     font-weight: bold;
-    color: #2f4f7f;
+    color: #1a3d6f;
 }
 
 .post-title {
@@ -69,7 +73,7 @@ header nav a {
 }
 
 .view-btn {
-    background-color: #2f4f7f;
+    background-color: #16345e;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -78,11 +82,11 @@ header nav a {
 }
 
 .view-btn:hover {
-    background-color: #1a3d6f;
+    background-color: #061d3d;
 }
 
 .view-more {
-    background-color: #2f4f7f;
+    background-color: #16345e;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -91,5 +95,5 @@ header nav a {
 }
 
 .view-more:hover {
-    background-color: #1a3d6f;
+    background-color: #061d3d;
 }
