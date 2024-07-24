@@ -1,98 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #90b6d0, #6999c4);
-        }
-        .container {
-            max-width: 400px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .header h1 {
-            font-size: 24px;
-            color: #337ab7;
-        }
-        .header h2 {
-            font-size: 15px;
-            color: #366fa1;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 16px;
-            color: #666;
-        }
-        .form-group input[type="text"], .form-group input[type="email"], .form-group input[type="password"] {
-            width: 100%;
-            padding: 4px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-        }
-        .form-group button {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            background-color: #337ab7;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .form-group input[type="submit"]:hover {
-            background-color: #23527c;
-        }
-        .login-link {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .login-link a {
-            color: #337ab7;
-            text-decoration: none;
-        }
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to top, #2f4f72, #0d1f33);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #122b48;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    font-size: 15px;
+    color: #0b262b;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #2f4f72;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #2f4f72;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #0d1f33;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #2f4f72;
+    text-decoration: none;
+}
+
+.icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Cadastro</h1>
+            <h1><i class="fas fa-user-plus icon"></i>Cadastro</h1>
             <h2>Deseja criar uma conta na nossa plataforma? Insira algumas informações para criar sua conta!</h2>
         </div>
-        <form>
+        <form onsubmit="return validateForm()">
             <div class="form-group">
-                <label for="nome">Nome</label>
+                <label for="nome"><i class="fas fa-user icon"></i>Nome</label>
                 <input type="text" id="nome" required>
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email"><i class="fas fa-envelope icon"></i>Email</label>
                 <input type="email" id="email" required>
             </div>
             <div class="form-group">
-                <label for="senha">Senha</label>
+                <label for="senha"><i class="fas fa-lock icon"></i>Senha</label>
                 <input type="password" id="senha" required>
-            </div>
-            <div class="form-group">
-                <button><a href="perfil.html">CADASTRAR</a></button>
-            </div>
+                <div class="form-group">
+                    <br>
+                    <button id="cadastro-btn" href="feednoticias.html"><i class="fas fa-check icon"></i>CADASTRAR</button>
+                </div>
+            </form>
+            
+            <script>
+                function validateForm() {
+                    var nome = document.getElementById("nome").value;
+                    var email = document.getElementById("email").value;
+                    var senha = document.getElementById("senha").value;
+            
+                    if (nome && email && senha) {
+                        window.location.href = "feednoticias.html";
+                        return false;
+                    } else {
+                        alert("Preencha todos os campos!");
+                        return false;
+                    }
+                }
+            </script>
         </form>
         <div class="login-link">
-            <p>Já tem conta? <a href="login.html">Fazer login</a></p>
+            <p>Já tem conta? <a href="login.html"><i class="fas fa-sign-in-alt icon"></i>Fazer login</a></p>
         </div>
     </div>
 </body>
-</html>
