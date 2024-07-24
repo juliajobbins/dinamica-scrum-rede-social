@@ -12,20 +12,26 @@
             padding: 0;
             color: #f0f0f0;
         }
-        .profile, .edit-profile {
+
+        .profile,
+        .edit-profile {
             display: none;
             flex-direction: column;
             align-items: center;
             margin-top: 20px;
         }
-        .edit-profile.active, .profile.active {
+
+        .edit-profile.active,
+        .profile.active {
             display: flex;
         }
+
         .connect {
             display: flex;
             justify-content: center;
             margin: 20px 0;
         }
+
         .connect button {
             background-color: #3f51b5;
             color: white;
@@ -35,9 +41,11 @@
             cursor: pointer;
             margin: 0 10px;
         }
+
         .connect button:hover {
             background-color: #303f9f;
         }
+
         .edit-profile {
             background-color: #1e1e1e;
             padding: 20px;
@@ -45,25 +53,31 @@
             max-width: 400px;
             margin: 20px auto;
         }
+
         .edit-profile h3 {
             color: #3f51b5;
             margin-bottom: 10px;
             text-align: center;
         }
+
         .edit-profile form {
             display: flex;
             flex-direction: column;
         }
+
         .edit-profile form label {
             margin: 10px 0 5px;
         }
-        .edit-profile form input, .edit-profile form textarea {
+
+        .edit-profile form input,
+        .edit-profile form textarea {
             padding: 10px;
             border: 1px solid #3f51b5;
             border-radius: 5px;
             background-color: #121212;
             color: #f0f0f0;
         }
+
         .edit-profile form button {
             background-color: #8393ed;
             color: white;
@@ -73,6 +87,7 @@
             cursor: pointer;
             margin-top: 10px;
         }
+
         .edit-profile form button profile {
             background-color: #3f51b5;
             color: white;
@@ -82,14 +97,17 @@
             cursor: pointer;
             margin-top: 10px;
         }
+
         .edit-profile form button:hover {
             background-color: #8393ed;
         }
+
         .nav-buttons {
             display: flex;
             justify-content: center;
             margin: 20px 0;
         }
+
         .nav-buttons button {
             background-color: #3f51b5;
             color: white;
@@ -99,38 +117,62 @@
             cursor: pointer;
             margin: 0 10px;
         }
+
         .nav-buttons button:hover {
             background-color: #303f9f;
+        }
+
+        a {
+            color: #f0f0f0;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        Modelinsta - Editar Perfil
-    </div>
     <div class="edit-profile active" id="edit-profile">
         <h3>Editar Perfil</h3>
-        <form>
+        <form id="editProfileForm">
             <label for="profile-pic">Foto de Perfil</label>
-            <input type="file" id="profile-pic" name="profile-pic">
-            
+            <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+
             <label for="name">Nome</label>
             <input type="text" id="name" name="name" value="Nome do Modelo/Estilista">
-            
+
             <label for="username">Nome de Usuário</label>
             <input type="text" id="username" name="username" value="@nomeusuario">
-            
+
             <label for="bio">Bio</label>
             <textarea id="bio" name="bio" rows="4">Uma breve descrição sobre você...</textarea>
-            
-            <button>Salvar Alterações</button>
 
-            <button><a href="exemploperfil.html">Exemplo de perfil</a></button>
+            <button type="button" onclick="saveChanges()">Salvar Alterações</button>
         </form>
         <div class="nav-buttons">
-            <button><a href="perfil.html"> Cancelar</a></button>
+            <button><a href="perfil.html">Cancelar</a></button>
         </div>
     </div>
+    <script>
+        function saveChanges() {
+            const name = document.getElementById('name').value;
+            const username = document.getElementById('username').value;
+            const bio = document.getElementById('bio').value;
+
+            localStorage.setItem('profileName', name);
+            localStorage.setItem('profileUsername', username);
+            localStorage.setItem('profileBio', bio);
+
+            const profilePicInput = document.getElementById('profile-pic');
+            if (profilePicInput.files && profilePicInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    localStorage.setItem('profilePic', e.target.result);
+                    window.location.href = 'perfil.html';
+                };
+                reader.readAsDataURL(profilePicInput.files[0]);
+            } else {
+                window.location.href = 'perfil.html';
+            }
+        }
     </script>
 </body>
+
 </html>
