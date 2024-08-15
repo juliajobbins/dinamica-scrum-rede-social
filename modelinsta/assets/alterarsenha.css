@@ -1,0 +1,40 @@
+body {
+    background-color: #000;
+    color: #6bbbe2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #38bdff;
+}
+input[type="password"], button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+input[type="password"] {
+    background-color: #222;
+    color: #38bdff;
+}
+button {
+    background-color: #217ba7;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #165b7d;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
